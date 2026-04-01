@@ -6,6 +6,7 @@
   <title>Gracewell | Christian prayer, Scripture, journaling, and Together practices</title>
   <meta name="description" content="Gracewell is a Christian prayer app with daily Scripture, journaling, guided reflection, and shared practices for spiritual formation." />
   <link rel="canonical" href="https://gracewell.app/" />
+  <link rel="alternate" hreflang="en" href="https://gracewell.app/" />
   <link rel="alternate" hreflang="es" href="https://gracewell.app/?lang=es" />
   <meta property="og:title" content="Gracewell" />
   <meta property="og:description" content="A Scripture-rooted prayer, journaling, and Together app for daily spiritual formation." />
@@ -72,95 +73,222 @@
     .section-box p, .section-box li { color: var(--muted); line-height: 1.72; font-size: 1rem; }
     ul { margin: 14px 0 0; padding-left: 18px; }
     .footer { padding: 40px 0 60px; color: var(--muted); font-size: 0.95rem; display: flex; gap: 24px; flex-wrap: wrap; }
-    .screenshot-panel { display: grid; place-items: center; padding: 12px; border-radius: var(--radius-xl); background: rgba(255,255,255,0.64); border: 1px solid rgba(223,204,173,0.55); }
-    .screenshot-panel img { width: min(100%, 340px); height: auto; display: block; border-radius: 28px; box-shadow: var(--shadow); }
     @media (max-width: 900px) { .hero, .section-grid { grid-template-columns: 1fr; } .metrics { grid-template-columns: 1fr; } .hero-main, .hero-side { padding: 24px; } }
   </style>
 </head>
 <body>
   <div class="shell">
     <nav class="nav">
-      <a href="https://gracewell.app/" aria-label="Gracewell home">
+      <a href="/" aria-label="Gracewell home">
         <div class="brand-title">Gracewell</div>
-        <div class="brand-sub">Daily spiritual formation</div>
+        <div class="brand-sub" data-i18n="nav.tagline">Daily spiritual formation</div>
       </a>
       <div class="nav-links">
-        <a href="/support/">Support</a>
-        <a href="/privacy/">Privacy</a>
-        <a href="/terms/">Terms</a>
+        <a href="/support/" data-i18n="nav.support">Support</a>
+        <a href="/privacy/" data-i18n="nav.privacy">Privacy</a>
+        <a href="/terms/" data-i18n="nav.terms">Terms</a>
       </div>
     </nav>
+
     <section class="hero">
       <div class="hero-main">
-        <div class="eyebrow">Daily spiritual formation</div>
-        <h1>A calmer way to return to prayer, Scripture, and reflection each day.</h1>
-        <p class="lead">Gracewell is a Christian prayer app with daily Scripture, journaling, guided reflection, and shared practices that help build a steady rhythm of faith with clarity and calm.</p>
+        <div class="eyebrow" data-i18n="hero.eyebrow">Daily spiritual formation</div>
+        <h1 data-i18n="hero.headline">A calmer way to return to prayer, Scripture, and reflection each day.</h1>
+        <p class="lead" data-i18n="hero.lead">Gracewell is a Christian prayer app with daily Scripture, journaling, guided reflection, and shared practices that help build a steady rhythm of faith with clarity and calm.</p>
         <div class="cta-row">
-          <a class="cta primary" href="#">App Store listing coming soon</a>
-          <a class="cta secondary" href="/?lang=es">Ver en español</a>
+          <a class="cta primary" href="https://apps.apple.com/us/app/gracewell/id6760741742" data-i18n="hero.cta_primary">Download on the App Store</a>
+          <a class="cta secondary" id="langSwitch" href="/?lang=es">Ver en español</a>
         </div>
         <div class="metrics">
-          <div class="metric"><strong>Daily rhythm</strong><span>Morning, midday, and evening practices that make it easier to return to God consistently.</span></div>
-          <div class="metric"><strong>Prayer and journaling</strong><span>A place to pray, reflect, write, and carry what matters through the day.</span></div>
-          <div class="metric"><strong>Together practices</strong><span>Shared spiritual practices for two people who want to grow in faith together.</span></div>
+          <div class="metric"><strong data-i18n="metrics.rhythm_title">Daily rhythm</strong><span data-i18n="metrics.rhythm_desc">Morning, midday, and evening practices that make it easier to return to God consistently.</span></div>
+          <div class="metric"><strong data-i18n="metrics.prayer_title">Prayer and journaling</strong><span data-i18n="metrics.prayer_desc">A place to pray, reflect, write, and carry what matters through the day.</span></div>
+          <div class="metric"><strong data-i18n="metrics.together_title">Together practices</strong><span data-i18n="metrics.together_desc">Shared spiritual practices for two people who want to grow in faith together.</span></div>
         </div>
       </div>
       <aside class="hero-side">
         <div class="lang-toggle" aria-label="Language switcher">
-          <a href="/" class="active" lang="en">English</a>
-          <a href="/?lang=es" lang="es">Español</a>
+          <a href="/" id="toggleEn" lang="en">English</a>
+          <a href="/?lang=es" id="toggleEs" lang="es">Español</a>
         </div>
         <div class="app-chip">
           <img src="/assets/icon-gracewell-1024.png" alt="Gracewell app icon" />
           <div>
             <strong>Gracewell</strong>
-            <span>A Scripture-rooted prayer, journaling, and Together app for daily spiritual formation.</span>
+            <span data-i18n="chip.desc">A Scripture-rooted prayer, journaling, and Together app for daily spiritual formation.</span>
           </div>
         </div>
         <div class="stack">
           <div class="card">
-            <h3>Best for</h3>
-            <p>People who want to return to prayer and Scripture with a calmer structure they can actually keep.</p>
+            <h3 data-i18n="card.best_for_title">Best for</h3>
+            <p data-i18n="card.best_for_desc">People who want to return to prayer and Scripture with a calmer structure they can actually keep.</p>
           </div>
           <div class="card">
-            <h3>Why it stands out</h3>
-            <p>Gracewell brings daily rhythm, guided support, journaling, and shared practices into one focused spiritual formation experience.</p>
+            <h3 data-i18n="card.standout_title">Why it stands out</h3>
+            <p data-i18n="card.standout_desc">Gracewell brings daily rhythm, guided support, journaling, and shared practices into one focused spiritual formation experience.</p>
           </div>
           <div class="card">
-            <h3>Links</h3>
-            <p><a href="/support/">Support</a><br /><a href="/privacy/">Privacy Policy</a><br /><a href="/terms/">Terms of Service</a></p>
+            <h3 data-i18n="card.links_title">Links</h3>
+            <p><a href="/support/" data-i18n="nav.support">Support</a><br /><a href="/privacy/" data-i18n="nav.privacy">Privacy Policy</a><br /><a href="/terms/" data-i18n="nav.terms">Terms of Service</a></p>
           </div>
         </div>
       </aside>
     </section>
+
     <section class="section">
       <div class="section-grid">
         <div class="section-box">
-          <h2>What Gracewell helps build</h2>
-          <p>Gracewell gives users a more sustainable way to build habits of prayer, Scripture reading, and reflection in daily life.</p>
+          <h2 data-i18n="section1.title">What Gracewell helps build</h2>
+          <p data-i18n="section1.desc">Gracewell gives users a more sustainable way to build habits of prayer, Scripture reading, and reflection in daily life.</p>
           <ul>
-            <li>A daily morning, midday, and evening rhythm.</li>
-            <li>Scripture, prayer, Guide, and journaling in one app.</li>
-            <li>Shared spiritual practices for two trusted people through Together.</li>
+            <li data-i18n="section1.li1">A daily morning, midday, and evening rhythm.</li>
+            <li data-i18n="section1.li2">Scripture, prayer, Guide, and journaling in one app.</li>
+            <li data-i18n="section1.li3">Shared spiritual practices for two trusted people through Together.</li>
           </ul>
         </div>
         <div class="section-box">
-          <h2>What is included</h2>
-          <p>The experience is designed to feel clear, grounded, and genuinely useful for people returning to God each day.</p>
+          <h2 data-i18n="section2.title">What is included</h2>
+          <p data-i18n="section2.desc">The experience is designed to feel clear, grounded, and genuinely useful for people returning to God each day.</p>
           <ul>
-            <li>Bible reading and curated passages.</li>
-            <li>Journaling, prayers, and Carry This Today.</li>
-            <li>Shared sessions and paths for faith formation with another person.</li>
+            <li data-i18n="section2.li1">Bible reading and curated passages.</li>
+            <li data-i18n="section2.li2">Journaling, prayers, and Carry This Today.</li>
+            <li data-i18n="section2.li3">Shared sessions and paths for faith formation with another person.</li>
           </ul>
         </div>
       </div>
     </section>
+
     <footer class="footer">
-      <a href="/support/">Support</a>
-      <a href="/privacy/">Privacy Policy</a>
-      <a href="/terms/">Terms of Service</a>
+      <a href="/support/" data-i18n="nav.support">Support</a>
+      <a href="/privacy/" data-i18n="nav.privacy">Privacy Policy</a>
+      <a href="/terms/" data-i18n="nav.terms">Terms of Service</a>
       <span style="margin-left: auto;"><a href="https://richcodestudio.com/" style="color: inherit;">Rich Code Studio</a></span>
     </footer>
   </div>
+
+  <script id="strings-en" type="application/json">{
+    "nav": { "tagline": "Daily spiritual formation", "support": "Support", "privacy": "Privacy", "terms": "Terms" },
+    "hero": {
+      "eyebrow": "Daily spiritual formation",
+      "headline": "A calmer way to return to prayer, Scripture, and reflection each day.",
+      "lead": "Gracewell is a Christian prayer app with daily Scripture, journaling, guided reflection, and shared practices that help build a steady rhythm of faith with clarity and calm.",
+      "cta_primary": "Download on the App Store",
+      "cta_switch": "Ver en español"
+    },
+    "metrics": {
+      "rhythm_title": "Daily rhythm", "rhythm_desc": "Morning, midday, and evening practices that make it easier to return to God consistently.",
+      "prayer_title": "Prayer and journaling", "prayer_desc": "A place to pray, reflect, write, and carry what matters through the day.",
+      "together_title": "Together practices", "together_desc": "Shared spiritual practices for two people who want to grow in faith together."
+    },
+    "chip": { "desc": "A Scripture-rooted prayer, journaling, and Together app for daily spiritual formation." },
+    "card": {
+      "best_for_title": "Best for", "best_for_desc": "People who want to return to prayer and Scripture with a calmer structure they can actually keep.",
+      "standout_title": "Why it stands out", "standout_desc": "Gracewell brings daily rhythm, guided support, journaling, and shared practices into one focused spiritual formation experience.",
+      "links_title": "Links"
+    },
+    "section1": {
+      "title": "What Gracewell helps build",
+      "desc": "Gracewell gives users a more sustainable way to build habits of prayer, Scripture reading, and reflection in daily life.",
+      "li1": "A daily morning, midday, and evening rhythm.",
+      "li2": "Scripture, prayer, Guide, and journaling in one app.",
+      "li3": "Shared spiritual practices for two trusted people through Together."
+    },
+    "section2": {
+      "title": "What is included",
+      "desc": "The experience is designed to feel clear, grounded, and genuinely useful for people returning to God each day.",
+      "li1": "Bible reading and curated passages.",
+      "li2": "Journaling, prayers, and Carry This Today.",
+      "li3": "Shared sessions and paths for faith formation with another person."
+    }
+  }</script>
+
+  <script id="strings-es" type="application/json">{
+    "nav": { "tagline": "Formación espiritual diaria", "support": "Soporte", "privacy": "Privacidad", "terms": "Términos" },
+    "hero": {
+      "eyebrow": "Formación espiritual diaria",
+      "headline": "Una manera más serena de volver a la oración, la Escritura y la reflexión.",
+      "lead": "Gracewell es una app cristiana de oración, Escritura, diario y prácticas compartidas que ayuda a formar un ritmo diario de fe con calma, claridad y apoyo guiado.",
+      "cta_primary": "Próximamente en App Store",
+      "cta_switch": "View in English"
+    },
+    "metrics": {
+      "rhythm_title": "Ritmo diario", "rhythm_desc": "Prácticas de mañana, mediodía y noche para volver a Dios de forma constante.",
+      "prayer_title": "Oración y diario", "prayer_desc": "Un lugar para orar, escribir y llevar consigo lo que más importa en el día.",
+      "together_title": "Caminar con otro", "together_desc": "Prácticas compartidas para crecer en la fe con una persona de confianza."
+    },
+    "chip": { "desc": "Oración, Escritura, diario y prácticas compartidas para la formación espiritual diaria." },
+    "card": {
+      "best_for_title": "Ideal para", "best_for_desc": "Personas que desean volver a la oración y la Escritura con una estructura más suave y sostenible.",
+      "standout_title": "Por qué destaca", "standout_desc": "Gracewell combina ritmo diario, guía, diario y prácticas compartidas sin sentirse como una app recargada.",
+      "links_title": "Enlaces"
+    },
+    "section1": {
+      "title": "Lo que Gracewell ayuda a formar",
+      "desc": "Gracewell ofrece una manera práctica y serena de construir hábitos de oración, Escritura y reflexión en la vida diaria.",
+      "li1": "Un ritmo diario de mañana, mediodía y noche.",
+      "li2": "Acceso a Escritura, oraciones, guía y diario en una sola app.",
+      "li3": "Prácticas compartidas para dos personas que quieren crecer en la fe juntas."
+    },
+    "section2": {
+      "title": "Qué incluye",
+      "desc": "La experiencia está diseñada para ser clara, accesible y realmente útil para volver a Dios cada día.",
+      "li1": "Lectura bíblica y pasajes seleccionados.",
+      "li2": "Diario, oraciones y la función Llevar Hoy.",
+      "li3": "Sesiones y caminos compartidos en Together."
+    }
+  }</script>
+
+  <script>
+    (function () {
+      function detectLocale() {
+        const params = new URLSearchParams(window.location.search);
+        const q = params.get("lang");
+        if (q && ["en", "es"].includes(q)) return q;
+        const stored = localStorage.getItem("gw_lang");
+        if (stored && ["en", "es"].includes(stored)) return stored;
+        const browser = navigator.language?.slice(0, 2);
+        if (browser === "es") return "es";
+        return "en";
+      }
+
+      const locale = detectLocale();
+      localStorage.setItem("gw_lang", locale);
+
+      const raw = document.getElementById("strings-" + locale)?.textContent;
+      const strings = raw ? JSON.parse(raw) : {};
+
+      function t(path) {
+        return path.split(".").reduce((o, k) => o?.[k], strings) ?? path;
+      }
+
+      // Apply translations
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        el.textContent = t(el.getAttribute("data-i18n"));
+      });
+
+      // Update html lang
+      document.documentElement.lang = locale;
+
+      // Update page title and meta description for Spanish
+      if (locale === "es") {
+        document.title = "Gracewell | Oración, Escritura y diario cristiano diario";
+        document.querySelector('meta[name="description"]')
+          ?.setAttribute("content", "Gracewell es una app cristiana de oración, Escritura, diario y prácticas compartidas para la formación espiritual diaria.");
+      }
+
+      // Lang toggle active state
+      document.getElementById("toggleEn").classList.toggle("active", locale === "en");
+      document.getElementById("toggleEs").classList.toggle("active", locale === "es");
+
+      // Lang switch CTA button
+      const langSwitch = document.getElementById("langSwitch");
+      if (locale === "es") {
+        langSwitch.textContent = t("hero.cta_switch");
+        langSwitch.href = "/";
+      } else {
+        langSwitch.textContent = t("hero.cta_switch");
+        langSwitch.href = "/?lang=es";
+      }
+    }());
+  </script>
 </body>
 </html>
