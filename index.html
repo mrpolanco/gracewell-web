@@ -39,7 +39,9 @@
     .brand-sub { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-top: 3px; }
     .nav-links { display: flex; gap: 12px; flex-wrap: wrap; }
     .nav-links a { padding: 10px 16px; border-radius: 999px; color: var(--muted); font-weight: 700; }
-    .nav-links a:hover, .nav-links a.active { background: var(--panel-solid); color: var(--text); box-shadow: var(--shadow); }
+    .nav-links a:hover { background: var(--panel-solid); color: var(--text); box-shadow: var(--shadow); }
+    .nav-links a.download { background: var(--accent); color: #1f1f1f; padding: 10px 20px; }
+    .nav-links a.download:hover { background: var(--accent-deep); color: #fff; box-shadow: var(--shadow); }
     .hero { display: grid; grid-template-columns: 1.35fr 0.85fr; gap: 24px; align-items: stretch; padding-bottom: 24px; }
     .hero-main, .hero-side { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-xl); box-shadow: var(--shadow); backdrop-filter: blur(10px); }
     .hero-main { padding: 36px; }
@@ -84,9 +86,7 @@
         <div class="brand-sub" data-i18n="nav.tagline">Daily spiritual formation</div>
       </a>
       <div class="nav-links">
-        <a href="/support/" data-i18n="nav.support">Support</a>
-        <a href="/privacy/" data-i18n="nav.privacy">Privacy</a>
-        <a href="/terms/" data-i18n="nav.terms">Terms</a>
+        <a class="download" href="https://apps.apple.com/us/app/gracewell/id6760741742" data-i18n="nav.download">Download</a>
       </div>
     </nav>
 
@@ -166,7 +166,7 @@
   </div>
 
   <script id="strings-en" type="application/json">{
-    "nav": { "tagline": "Daily spiritual formation", "support": "Support", "privacy": "Privacy", "terms": "Terms" },
+    "nav": { "tagline": "Daily spiritual formation", "download": "Download", "support": "Support", "privacy": "Privacy", "terms": "Terms" },
     "hero": {
       "eyebrow": "Daily spiritual formation",
       "headline": "A calmer way to return to prayer, Scripture, and reflection each day.",
@@ -202,7 +202,7 @@
   }</script>
 
   <script id="strings-es" type="application/json">{
-    "nav": { "tagline": "Formación espiritual diaria", "support": "Soporte", "privacy": "Privacidad", "terms": "Términos" },
+    "nav": { "tagline": "Formación espiritual diaria", "download": "Descargar", "support": "Soporte", "privacy": "Privacidad", "terms": "Términos" },
     "hero": {
       "eyebrow": "Formación espiritual diaria",
       "headline": "Una manera más serena de volver a la oración, la Escritura y la reflexión.",
