@@ -75,6 +75,8 @@
     .section-box p, .section-box li { color: var(--muted); line-height: 1.72; font-size: 1rem; }
     ul { margin: 14px 0 0; padding-left: 18px; }
     .footer { padding: 40px 0 60px; color: var(--muted); font-size: 0.95rem; display: flex; gap: 24px; flex-wrap: wrap; }
+    .screenshot-panel { display: grid; place-items: center; padding: 12px; border-radius: var(--radius-xl); background: rgba(255,255,255,0.64); border: 1px solid rgba(223,204,173,0.55); }
+    .screenshot-panel img { width: min(100%, 340px); height: auto; display: block; border-radius: 28px; box-shadow: var(--shadow); }
     @media (max-width: 900px) { .hero, .section-grid { grid-template-columns: 1fr; } .metrics { grid-template-columns: 1fr; } .hero-main, .hero-side { padding: 24px; } }
   </style>
 </head>
@@ -117,6 +119,9 @@
             <span data-i18n="chip.desc">A Scripture-rooted prayer, journaling, and Together app for daily spiritual formation.</span>
           </div>
         </div>
+        <div class="screenshot-panel">
+          <img src="/assets/gracewell-shot.png" alt="Gracewell app screenshot" loading="lazy" />
+        </div>
         <div class="stack">
           <div class="card">
             <h3 data-i18n="card.best_for_title">Best for</h3>
@@ -128,7 +133,7 @@
           </div>
           <div class="card">
             <h3 data-i18n="card.links_title">Links</h3>
-            <p><a href="/support/" data-i18n="nav.support">Support</a><br /><a href="/privacy/" data-i18n="nav.privacy">Privacy Policy</a><br /><a href="/terms/" data-i18n="nav.terms">Terms of Service</a></p>
+            <p><a id="linkSupport" href="/support/" data-i18n="nav.support">Support</a><br /><a id="linkPrivacy" href="/privacy/" data-i18n="nav.privacy">Privacy Policy</a><br /><a id="linkTerms" href="/terms/" data-i18n="nav.terms">Terms of Service</a></p>
           </div>
         </div>
       </aside>
@@ -219,7 +224,8 @@
     "card": {
       "best_for_title": "Ideal para", "best_for_desc": "Personas que desean volver a la oración y la Escritura con una estructura más suave y sostenible.",
       "standout_title": "Por qué destaca", "standout_desc": "Gracewell combina ritmo diario, guía, diario y prácticas compartidas sin sentirse como una app recargada.",
-      "links_title": "Enlaces"
+      "links_title": "Enlaces",
+      "links_support": "/es/support/", "links_privacy": "/es/privacy/", "links_terms": "/es/terms/"
     },
     "section1": {
       "title": "Lo que Gracewell ayuda a formar",
@@ -278,6 +284,13 @@
       // Lang toggle active state
       document.getElementById("toggleEn").classList.toggle("active", locale === "en");
       document.getElementById("toggleEs").classList.toggle("active", locale === "es");
+
+      // Update legal links for Spanish
+      if (locale === "es") {
+        document.getElementById("linkSupport").href = t("card.links_support") || "/es/support/";
+        document.getElementById("linkPrivacy").href = t("card.links_privacy") || "/es/privacy/";
+        document.getElementById("linkTerms").href = t("card.links_terms") || "/es/terms/";
+      }
 
       // Lang switch CTA button
       const langSwitch = document.getElementById("langSwitch");
