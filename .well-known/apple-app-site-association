@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["TEAM_ID.com.richpolanco.gracewell"],
+        "components": [
+          { "/": "/invite/*", "comment": "Together invite links" },
+          { "/": "/share/verse/*", "comment": "Shared verse links" },
+          { "/": "/share/prayer/*", "comment": "Shared prayer links" }
+        ]
+      }
+    ]
+  }
+}

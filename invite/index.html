@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gracewell Together Invite</title>
+  <meta name="description" content="Open a Gracewell Together invite, install the app if needed, and continue with your invite code." />
+  <meta name="robots" content="noindex" />
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --surface: rgba(255, 255, 255, 0.92);
+      --surface-strong: #ffffff;
+      --line: rgba(212, 196, 167, 0.78);
+      --text: #24314a;
+      --muted: #6b7280;
+      --accent: #1f3556;
+      --accent-soft: #d4b162;
+      --shadow: 0 20px 48px rgba(94, 79, 47, 0.11);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --content-width: 520px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+
+    body {
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(212, 177, 98, 0.14), transparent 34%),
+        linear-gradient(180deg, #fbf7f0 0%, var(--bg) 100%);
+    }
+
+    .invite-page {
+      width: min(calc(100% - 32px), var(--content-width));
+      margin: 0 auto;
+      padding: 32px 0 48px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero, .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .hero { padding: 28px; }
+
+    .eyebrow {
+      display: inline-flex;
+      margin: 0;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(212, 177, 98, 0.18);
+      color: #99762f;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(2.2rem, 8vw, 3.6rem);
+      line-height: 0.96;
+      letter-spacing: -0.05em;
+    }
+
+    .subtitle, .helper, .benefit-list li {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .actions {
+      display: grid;
+      gap: 12px;
+    }
+
+    .button, .text-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      border-radius: 18px;
+      padding: 16px 18px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .button-secondary {
+      background: var(--surface-strong);
+      color: var(--accent);
+      border: 1px solid var(--line);
+    }
+
+    .text-link {
+      color: var(--accent);
+      padding: 8px 18px;
+    }
+
+    .card { padding: 22px; }
+    .code-card { background: var(--surface-strong); }
+
+    .label, .section-title {
+      margin: 0 0 10px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #99762f;
+    }
+
+    .section-title {
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .invite-code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: clamp(1.35rem, 6vw, 2rem);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--text);
+      word-break: break-word;
+    }
+
+    .benefit-list {
+      margin: 0;
+      padding-left: 20px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .support-card { padding-top: 18px; }
+
+    .inline-link {
+      width: auto;
+      justify-content: flex-start;
+      padding: 8px 0 0;
+    }
+
+    .hidden { display: none !important; }
+
+    @media (max-width: 520px) {
+      .invite-page {
+        width: min(calc(100% - 24px), var(--content-width));
+        padding-top: 24px;
+      }
+
+      .hero, .card { border-radius: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="invite-page">
+    <section class="hero">
+      <p class="eyebrow" data-i18n="common.together_name"></p>
+      <h1 id="heroTitle" data-i18n="invite.landing.title"></h1>
+      <p id="heroSubtitle" class="subtitle" data-i18n="invite.landing.subtitle"></p>
+    </section>
+
+    <section class="actions">
+      <a
+        id="downloadButton"
+        class="button button-primary"
+        href="https://apps.apple.com/us/app/gracewell/id6760741742"
+        data-i18n="invite.landing.download"
+      ></a>
+      <button
+        id="copyCodeButton"
+        class="button button-secondary"
+        type="button"
+        data-i18n="invite.landing.copy_code"
+      ></button>
+      <a
+        id="openAppLink"
+        class="text-link"
+        href="gracewell://invite/"
+        data-i18n="invite.landing.open_app"
+      ></a>
+    </section>
+
+    <section id="inviteCodeCard" class="card code-card">
+      <p class="label" data-i18n="invite.landing.code_label"></p>
+      <div id="inviteCode" class="invite-code">ABCD-1234</div>
+      <p id="codeHelper" class="helper" data-i18n="invite.landing.code_helper"></p>
+      <p id="expiryStatus" class="helper hidden"></p>
+    </section>
+
+    <section class="card">
+      <p class="section-title" data-i18n="invite.landing.footer"></p>
+      <ul class="benefit-list">
+        <li data-i18n="invite.accept.benefit_prayers"></li>
+        <li data-i18n="invite.accept.benefit_sessions"></li>
+        <li data-i18n="invite.accept.benefit_paths"></li>
+      </ul>
+    </section>
+
+    <section class="card support-card">
+      <p class="section-title" data-i18n="invite.landing.already_installed_short"></p>
+      <p class="helper" data-i18n="invite.invalid.helper"></p>
+      <a class="text-link inline-link" href="/support/">
+        Gracewell support
+      </a>
+    </section>
+  </main>
+
+  <script>
+    const I18N = {
+      locale: "en",
+      strings: {},
+
+      t(path, replacements = []) {
+        const value = path.split(".").reduce((obj, key) => obj?.[key], this.strings);
+        if (typeof value !== "string") return path;
+        let result = value;
+        replacements.forEach((replacement) => {
+          result = result.replace("%@", replacement);
+        });
+        return result;
+      }
+    };
+
+    function detectLocale() {
+      const params = new URLSearchParams(window.location.search);
+      const queryLang = params.get("lang");
+      if (queryLang && ["en", "es"].includes(queryLang)) return queryLang;
+
+      const stored = window.localStorage.getItem("gw_lang");
+      if (stored && ["en", "es"].includes(stored)) return stored;
+
+      const browser = navigator.language?.slice(0, 2);
+      if (browser && ["en", "es"].includes(browser)) return browser;
+
+      return "en";
+    }
+
+    function applyTranslations(root = document) {
+      root.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+        element.textContent = I18N.t(key);
+      });
+    }
+
+    function tFormat(path, ...replacements) {
+      return I18N.t(path, replacements);
+    }
+
+    function askForNewInviteLink(locale) {
+      window.location.href = locale === "es"
+        ? "mailto:?subject=Invitación%20de%20Gracewell&body=¿Podría%20compartir%20de%20nuevo%20la%20invitación%20de%20Gracewell?"
+        : "mailto:?subject=Gracewell%20invite&body=Please%20send%20the%20Gracewell%20invitation%20again.";
+    }
+
+    async function initInvitePage() {
+      const locale = detectLocale();
+      window.localStorage.setItem("gw_lang", locale);
+
+      // Load locale strings from /locales/
+      try {
+        const response = await fetch(`/locales/${locale}.json`);
+        I18N.strings = await response.json();
+        I18N.locale = locale;
+      } catch {
+        // Fallback: try English
+        try {
+          const fallback = await fetch("/locales/en.json");
+          I18N.strings = await fallback.json();
+          I18N.locale = "en";
+        } catch {
+          I18N.strings = {};
+        }
+      }
+
+      applyTranslations();
+
+      document.documentElement.lang = locale;
+      document.title = I18N.t("invite.landing.title");
+
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get("code");
+      const tokenFromQuery = params.get("token");
+      const inviter = params.get("inviter") || params.get("from");
+      const expires = Number(params.get("expires"));
+      const pathParts = window.location.pathname.split("/").filter(Boolean);
+      const inviteIndex = pathParts.lastIndexOf("invite");
+      const tokenFromPath = inviteIndex >= 0 && inviteIndex + 1 < pathParts.length
+        ? pathParts[inviteIndex + 1]
+        : null;
+      const sanitizedTokenFromPath = tokenFromPath && tokenFromPath !== "index.html"
+        ? tokenFromPath
+        : null;
+      const inviteToken = tokenFromQuery || sanitizedTokenFromPath;
+      const inviteCode = code || inviteToken;
+
+      const heroTitle = document.getElementById("heroTitle");
+      const heroSubtitle = document.getElementById("heroSubtitle");
+      const inviteCodeCard = document.getElementById("inviteCodeCard");
+      const inviteCodeElement = document.getElementById("inviteCode");
+      const codeHelper = document.getElementById("codeHelper");
+      const expiryStatus = document.getElementById("expiryStatus");
+      const copyButton = document.getElementById("copyCodeButton");
+      const openAppLink = document.getElementById("openAppLink");
+      const hasExpiry = Number.isFinite(expires) && expires > 0;
+      const expiryDate = hasExpiry ? new Date(expires * 1000) : null;
+      const isExpired = expiryDate ? Date.now() >= expiryDate.getTime() : false;
+      const expiryFormatter = new Intl.DateTimeFormat(locale, { dateStyle: "medium", timeStyle: "short" });
+
+      if (inviter && !isExpired) {
+        heroSubtitle.textContent = tFormat("invite.accept.subtitle", decodeURIComponent(inviter));
+      }
+
+      if (!inviteCode) {
+        heroTitle.textContent = I18N.t("invite.invalid.title");
+        heroSubtitle.textContent = I18N.t("invite.invalid.subtitle");
+        codeHelper.textContent = I18N.t("invite.invalid.helper");
+        inviteCodeCard.classList.add("hidden");
+        copyButton.textContent = I18N.t("invite.invalid.secondary");
+        openAppLink.textContent = I18N.t("invite.landing.open_instead");
+        openAppLink.href = "gracewell://invite/";
+        copyButton.onclick = () => askForNewInviteLink(locale);
+        return;
+      }
+
+      inviteCodeElement.textContent = inviteCode;
+      openAppLink.href = `gracewell://invite/${encodeURIComponent(inviteCode)}`;
+
+      if (expiryDate && expiryStatus) {
+        expiryStatus.classList.remove("hidden");
+        const formattedExpiry = expiryFormatter.format(expiryDate);
+        expiryStatus.textContent = isExpired
+          ? tFormat("invite.landing.expired_on", formattedExpiry)
+          : tFormat("invite.landing.expires_on", formattedExpiry);
+      }
+
+      if (isExpired) {
+        heroTitle.textContent = I18N.t("invite.landing.expired_title");
+        heroSubtitle.textContent = I18N.t("invite.landing.expired_subtitle");
+        codeHelper.textContent = I18N.t("invite.accept.error_expired");
+        copyButton.textContent = I18N.t("invite.invalid.secondary");
+        copyButton.onclick = () => askForNewInviteLink(locale);
+        return;
+      }
+
+      copyButton.onclick = async () => {
+        try {
+          await navigator.clipboard.writeText(inviteCode);
+          const original = copyButton.textContent;
+          copyButton.textContent = I18N.t("common.copied");
+          window.setTimeout(() => {
+            copyButton.textContent = original;
+          }, 1500);
+        } catch {
+          window.alert(I18N.t("common.copy_failed"));
+        }
+      };
+    }
+
+    initInvitePage();
+  </script>
+</body>
+</html>

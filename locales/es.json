@@ -1,0 +1,84 @@
+{
+  "common": {
+    "app_name": "Gracewell",
+    "together_name": "Gracewell Together",
+    "cancel": "Cancelar",
+    "continue": "Continuar",
+    "copied": "Copiado",
+    "copy_failed": "No se pudo copiar",
+    "loading": "Cargando…",
+    "open_app": "Abrir Gracewell",
+    "download_app": "Descargar Gracewell"
+  },
+  "invite": {
+    "landing": {
+      "title": "Le han invitado a Gracewell Together",
+      "subtitle": "Oración compartida, reflexión y crecimiento espiritual para dos.",
+      "expired_title": "Esta invitación ha expirado",
+      "expired_subtitle": "Pida a quien la envió que comparta un nuevo enlace de invitación de Gracewell Together.",
+      "download": "Descargar Gracewell",
+      "copy_code": "Copiar código de invitación",
+      "open_app": "Abrir Gracewell",
+      "code_label": "Su código de invitación",
+      "code_helper": "¿Ya tiene la app? Abra Gracewell y use este código en Together.",
+      "expires_on": "La invitación expira %@",
+      "expired_on": "Expiró %@",
+      "footer": "Podrán compartir oraciones, comenzar sesiones juntos y seguir caminos compartidos.",
+      "already_installed_short": "¿Ya tiene la app?",
+      "open_instead": "Abrir Gracewell"
+    },
+    "invalid": {
+      "title": "Este enlace de invitación parece incompleto",
+      "subtitle": "Aun así puede descargar Gracewell y pedir al remitente que comparta la invitación de nuevo.",
+      "primary": "Descargar Gracewell",
+      "secondary": "Pedir una nueva invitación",
+      "helper": "Si ya tiene Gracewell, todavía puede intentar abrir la app y revisar Together."
+    },
+    "accept": {
+      "title": "Unirse a Gracewell Together",
+      "subtitle": "%@ le invitó a comenzar oración y reflexión compartidas.",
+      "benefit_prayers": "Compartir oraciones",
+      "benefit_sessions": "Comenzar sesiones juntos",
+      "benefit_paths": "Seguir caminos compartidos",
+      "code_label": "Código de invitación",
+      "primary": "Aceptar invitación",
+      "secondary": "Ahora no",
+      "footer": "Podrá elegir lo que comparte dentro de la app.",
+      "loading": "Aceptando invitación…",
+      "success": "Invitación aceptada",
+      "error": "No pudimos aceptar esta invitación en este momento.",
+      "error_expired": "Esta invitación ha expirado.",
+      "error_invalid": "Esta invitación ya no es válida."
+    },
+    "clipboard": {
+      "title": "¿Usar su invitación?",
+      "message": "Encontramos una invitación de Gracewell Together en su portapapeles.",
+      "primary": "Usar invitación",
+      "secondary": "Descartar",
+      "success": "Invitación cargada",
+      "error": "No pudimos usar la invitación copiada."
+    },
+    "code_entry": {
+      "title": "Ingresar código de invitación",
+      "subtitle": "Pegue o escriba el código que recibió.",
+      "field_label": "Código de invitación",
+      "placeholder": "Código de invitación",
+      "primary": "Continuar",
+      "secondary": "Cancelar",
+      "paste": "Pegar código",
+      "error_empty": "Ingrese un código de invitación para continuar.",
+      "error_invalid": "Ese código de invitación no parece válido.",
+      "error_not_found": "No pudimos encontrar esa invitación.",
+      "error_expired": "Este código de invitación ha expirado."
+    },
+    "sender": {
+      "sent_title": "Invitación enviada",
+      "sent_subtitle": "Estaremos listos cuando su pareja se una.",
+      "copy_link": "Copiar enlace",
+      "show_qr": "Mostrar código QR",
+      "enter_code": "Ingresar código manualmente",
+      "copy_success": "Enlace copiado",
+      "qr_title": "Escanee para unirse a Gracewell Together"
+    }
+  }
+}

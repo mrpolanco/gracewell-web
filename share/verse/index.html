@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shared Verse — Gracewell</title>
+  <meta name="description" content="A Scripture passage shared from Gracewell." />
+  <meta name="robots" content="noindex" />
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --surface: rgba(255, 255, 255, 0.92);
+      --line: rgba(212, 196, 167, 0.78);
+      --text: #24314a;
+      --muted: #6b7280;
+      --accent: #1f3556;
+      --shadow: 0 20px 48px rgba(94, 79, 47, 0.11);
+      --radius-xl: 28px;
+      --content-width: 520px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at top, rgba(212, 177, 98, 0.14), transparent 34%),
+                  linear-gradient(180deg, #fbf7f0 0%, var(--bg) 100%);
+    }
+    .page {
+      width: min(calc(100% - 32px), var(--content-width));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+      display: grid;
+      gap: 18px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: 32px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(212, 177, 98, 0.18);
+      color: #99762f;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .verse-text {
+      font-size: clamp(1.3rem, 4vw, 1.7rem);
+      line-height: 1.55;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+    }
+    .verse-ref {
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="card">
+      <div class="eyebrow">Gracewell</div>
+      <p class="verse-text" id="verseText">Loading…</p>
+      <p class="verse-ref" id="verseRef"></p>
+    </div>
+    <a class="cta" href="https://apps.apple.com/us/app/gracewell/id6760741742">
+      Open in Gracewell
+    </a>
+  </main>
+  <script>
+    // Populate verse content from query params: ?ref=John+3:16&text=For+God+so+loved...
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const ref = params.get("ref");
+      const text = params.get("text");
+      if (ref) document.getElementById("verseRef").textContent = decodeURIComponent(ref);
+      if (text) document.getElementById("verseText").textContent = decodeURIComponent(text);
+      if (ref) document.title = `${decodeURIComponent(ref)} — Gracewell`;
+    }());
+  </script>
+</body>
+</html>

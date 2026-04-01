@@ -1,0 +1,84 @@
+{
+  "common": {
+    "app_name": "Gracewell",
+    "together_name": "Gracewell Together",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "copied": "Copied",
+    "copy_failed": "Unable to copy",
+    "loading": "Loading…",
+    "open_app": "Open Gracewell",
+    "download_app": "Download Gracewell"
+  },
+  "invite": {
+    "landing": {
+      "title": "You've been invited to Gracewell Together",
+      "subtitle": "Shared prayer, reflection, and spiritual growth for two.",
+      "expired_title": "This invitation has expired",
+      "expired_subtitle": "Ask the sender to share a new Gracewell Together invitation link.",
+      "download": "Download Gracewell",
+      "copy_code": "Copy Invite Code",
+      "open_app": "Open Gracewell",
+      "code_label": "Your invite code",
+      "code_helper": "Already installed? Open Gracewell and use this code in Together.",
+      "expires_on": "Invite expires %@",
+      "expired_on": "Expired %@",
+      "footer": "You'll be able to share prayers, begin sessions together, and follow shared paths.",
+      "already_installed_short": "Already installed?",
+      "open_instead": "Open Gracewell instead"
+    },
+    "invalid": {
+      "title": "This invitation link looks incomplete",
+      "subtitle": "You can still download Gracewell and ask the sender to share the invitation again.",
+      "primary": "Download Gracewell",
+      "secondary": "Ask for a New Invite",
+      "helper": "If you already have Gracewell, you can still try opening the app and checking Together."
+    },
+    "accept": {
+      "title": "Join Gracewell Together",
+      "subtitle": "%@ invited you to begin shared prayer and reflection.",
+      "benefit_prayers": "Share prayers",
+      "benefit_sessions": "Begin sessions together",
+      "benefit_paths": "Follow shared paths",
+      "code_label": "Invitation code",
+      "primary": "Accept Invitation",
+      "secondary": "Not Now",
+      "footer": "You can choose what you share inside the app.",
+      "loading": "Accepting invitation…",
+      "success": "Invitation accepted",
+      "error": "We couldn't accept this invitation right now.",
+      "error_expired": "This invitation has expired.",
+      "error_invalid": "This invitation is no longer valid."
+    },
+    "clipboard": {
+      "title": "Use your invitation?",
+      "message": "We found a Gracewell Together invitation in your clipboard.",
+      "primary": "Use Invitation",
+      "secondary": "Dismiss",
+      "success": "Invitation loaded",
+      "error": "We couldn't use the copied invitation."
+    },
+    "code_entry": {
+      "title": "Enter Invite Code",
+      "subtitle": "Paste or type the code you received.",
+      "field_label": "Invite code",
+      "placeholder": "Invite code",
+      "primary": "Continue",
+      "secondary": "Cancel",
+      "paste": "Paste Code",
+      "error_empty": "Enter an invite code to continue.",
+      "error_invalid": "That invite code doesn't look valid.",
+      "error_not_found": "We couldn't find that invitation.",
+      "error_expired": "This invite code has expired."
+    },
+    "sender": {
+      "sent_title": "Invitation sent",
+      "sent_subtitle": "We'll be ready when your partner joins.",
+      "copy_link": "Copy Invite Link",
+      "show_qr": "Show QR Code",
+      "enter_code": "Enter Code Manually",
+      "copy_success": "Invite link copied",
+      "qr_title": "Scan to join Gracewell Together"
+    }
+  }
+}
