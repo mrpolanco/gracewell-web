@@ -163,9 +163,9 @@
     </section>
 
     <footer class="footer">
-      <a href="/support/" data-i18n="nav.support">Support</a>
-      <a href="/privacy/" data-i18n="nav.privacy">Privacy Policy</a>
-      <a href="/terms/" data-i18n="nav.terms">Terms of Service</a>
+      <a id="footerSupport" href="/support/" data-i18n="nav.support">Support</a>
+      <a id="footerPrivacy" href="/privacy/" data-i18n="nav.privacy">Privacy Policy</a>
+      <a id="footerTerms" href="/terms/" data-i18n="nav.terms">Terms of Service</a>
       <span style="margin-left: auto;"><a href="https://richcodestudio.com/" style="color: inherit;">Rich Code Studio</a></span>
     </footer>
   </div>
@@ -224,8 +224,7 @@
     "card": {
       "best_for_title": "Ideal para", "best_for_desc": "Personas que desean volver a la oración y la Escritura con una estructura más suave y sostenible.",
       "standout_title": "Por qué destaca", "standout_desc": "Gracewell combina ritmo diario, guía, diario y prácticas compartidas sin sentirse como una app recargada.",
-      "links_title": "Enlaces",
-      "links_support": "/es/support/", "links_privacy": "/es/privacy/", "links_terms": "/es/terms/"
+      "links_title": "Enlaces"
     },
     "section1": {
       "title": "Lo que Gracewell ayuda a formar",
@@ -285,11 +284,15 @@
       document.getElementById("toggleEn").classList.toggle("active", locale === "en");
       document.getElementById("toggleEs").classList.toggle("active", locale === "es");
 
-      // Update legal links for Spanish
+      // Update all legal links for Spanish
       if (locale === "es") {
-        document.getElementById("linkSupport").href = t("card.links_support") || "/es/support/";
-        document.getElementById("linkPrivacy").href = t("card.links_privacy") || "/es/privacy/";
-        document.getElementById("linkTerms").href = t("card.links_terms") || "/es/terms/";
+        const map = { support: "/es/support/", privacy: "/es/privacy/", terms: "/es/terms/" };
+        document.getElementById("linkSupport").href = map.support;
+        document.getElementById("linkPrivacy").href = map.privacy;
+        document.getElementById("linkTerms").href = map.terms;
+        document.getElementById("footerSupport").href = map.support;
+        document.getElementById("footerPrivacy").href = map.privacy;
+        document.getElementById("footerTerms").href = map.terms;
       }
 
       // Lang switch CTA button
