@@ -109,7 +109,7 @@
       </div>
       <aside class="hero-side">
         <div class="lang-toggle" aria-label="Language switcher">
-          <a href="/" id="toggleEn" lang="en">English</a>
+          <a href="/?lang=en" id="toggleEn" lang="en">English</a>
           <a href="/?lang=es" id="toggleEs" lang="es">Español</a>
         </div>
         <div class="app-chip">
@@ -299,7 +299,7 @@
       const langSwitch = document.getElementById("langSwitch");
       if (locale === "es") {
         langSwitch.textContent = t("hero.cta_switch");
-        langSwitch.href = "/";
+        langSwitch.href = "/?lang=en";
       } else {
         langSwitch.textContent = t("hero.cta_switch");
         langSwitch.href = "/?lang=es";
