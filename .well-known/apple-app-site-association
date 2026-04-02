@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appIDs": ["TEAM_ID.com.richpolanco.gracewell"],
+        "appIDs": ["RJS5S7337V.com.richpolanco.Gracewell"],
         "components": [
           { "/": "/invite/*", "comment": "Together invite links" },
           { "/": "/share/verse/*", "comment": "Legacy shared verse path segment" },
