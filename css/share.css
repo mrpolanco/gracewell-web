@@ -1,0 +1,184 @@
+:root {
+  --bg: #f7f3ec;
+  --card: #fffdf9;
+  --text: #1f2937;
+  --muted: #667085;
+  --line: rgba(0, 0, 0, 0.08);
+  --primary: #1f3556;
+  --accent: #b08b57;
+  --white: #ffffff;
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+}
+
+.share-page {
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  padding: 28px 16px 40px;
+}
+
+.share-shell {
+  width: 100%;
+  max-width: 520px;
+}
+
+.share-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.brand-mark {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--accent);
+  opacity: 0.7;
+}
+
+.brand-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.state-block.hidden {
+  display: none;
+}
+
+.share-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.share-chip {
+  margin: 0 0 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.share-title {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.share-title.hidden,
+.share-theme.hidden,
+.share-reference.hidden {
+  display: none;
+}
+
+.share-body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 5vw, 38px);
+  line-height: 1.18;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.share-prayer-body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  font-size: clamp(1.1rem, 3.5vw, 1.25rem);
+  line-height: 1.65;
+  font-weight: 500;
+}
+
+.share-reference {
+  margin: 18px 0 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.share-theme {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.share-footer {
+  margin-top: 28px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.share-brand {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.share-actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 56px;
+  padding: 14px 18px;
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.primary-button {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.secondary-button {
+  background: var(--white);
+  color: var(--primary);
+  border: 1px solid var(--line);
+}
+
+.state-title {
+  margin: 0 0 12px;
+  font-size: clamp(28px, 5vw, 34px);
+  line-height: 1.15;
+}
+
+.state-copy {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+@media (max-width: 420px) {
+  .share-card {
+    padding: 20px;
+  }
+}

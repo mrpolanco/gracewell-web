@@ -80,5 +80,31 @@
       "copy_success": "Enlace copiado",
       "qr_title": "Escanee para unirse a Gracewell Together"
     }
+  },
+  "share": {
+    "common": {
+      "open_in_app": "Abrir en Gracewell",
+      "download_app": "Descargar Gracewell",
+      "go_home": "Ir a Gracewell",
+      "missing_title": "Este enlace parece incompleto.",
+      "missing_subtitle": "Intente abrir Gracewell o pida de nuevo el enlace compartido.",
+      "invalid_title": "No se pudo leer este contenido compartido.",
+      "invalid_subtitle": "Intente abrir Gracewell directamente o pida de nuevo el enlace compartido."
+    },
+    "verse": {
+      "label": "Versículo",
+      "unavailable_title": "Este versículo compartido ya no está disponible.",
+      "unavailable_subtitle": "Descargue Gracewell para explorar más Escritura y oración."
+    },
+    "prayer": {
+      "label": "Oración",
+      "unavailable_title": "Esta oración compartida ya no está disponible.",
+      "unavailable_subtitle": "Descargue Gracewell para explorar más oración y reflexión."
+    },
+    "carry": {
+      "label": "Lleve esto hoy",
+      "unavailable_title": "Esta línea compartida ya no está disponible.",
+      "unavailable_subtitle": "Descargue Gracewell para explorar más Escritura, oración y reflexión."
+    }
   }
 }

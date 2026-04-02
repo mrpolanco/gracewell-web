@@ -6,8 +6,12 @@
         "appIDs": ["TEAM_ID.com.richpolanco.gracewell"],
         "components": [
           { "/": "/invite/*", "comment": "Together invite links" },
-          { "/": "/share/verse/*", "comment": "Shared verse links" },
-          { "/": "/share/prayer/*", "comment": "Shared prayer links" }
+          { "/": "/share/verse/*", "comment": "Legacy shared verse path segment" },
+          { "/": "/share/prayer/*", "comment": "Legacy shared prayer path segment" },
+          { "/": "/share/verse/", "?": { "p": "*" }, "comment": "Verse share with compact payload query" },
+          { "/": "/share/prayer/", "?": { "p": "*" }, "comment": "Prayer share with compact payload query" },
+          { "/": "/share/carry/", "?": { "p": "*" }, "comment": "Carry share with compact payload query" },
+          { "/": "/share/carry", "comment": "Carry This Today deep links" }
         ]
       }
     ]

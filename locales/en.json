@@ -80,5 +80,31 @@
       "copy_success": "Invite link copied",
       "qr_title": "Scan to join Gracewell Together"
     }
+  },
+  "share": {
+    "common": {
+      "open_in_app": "Open in Gracewell",
+      "download_app": "Download Gracewell",
+      "go_home": "Go to Gracewell",
+      "missing_title": "This link looks incomplete.",
+      "missing_subtitle": "Try opening Gracewell or ask for the shared link again.",
+      "invalid_title": "This shared content could not be read.",
+      "invalid_subtitle": "Try opening Gracewell directly or ask for the shared link again."
+    },
+    "verse": {
+      "label": "Verse",
+      "unavailable_title": "This shared verse is no longer available.",
+      "unavailable_subtitle": "Download Gracewell to explore more Scripture and prayer."
+    },
+    "prayer": {
+      "label": "Prayer",
+      "unavailable_title": "This shared prayer is no longer available.",
+      "unavailable_subtitle": "Download Gracewell to explore more prayer and reflection."
+    },
+    "carry": {
+      "label": "Carry Today",
+      "unavailable_title": "This shared line is no longer available.",
+      "unavailable_subtitle": "Download Gracewell to explore more Scripture, prayer, and reflection."
+    }
   }
 }

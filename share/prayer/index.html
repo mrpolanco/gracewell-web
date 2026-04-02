@@ -2,112 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shared Prayer — Gracewell</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gracewell</title>
   <meta name="description" content="A prayer shared from Gracewell." />
   <meta name="robots" content="noindex" />
-  <style>
-    :root {
-      --bg: #f6f1e8;
-      --surface: rgba(255, 255, 255, 0.92);
-      --line: rgba(212, 196, 167, 0.78);
-      --text: #24314a;
-      --muted: #6b7280;
-      --accent: #1f3556;
-      --shadow: 0 20px 48px rgba(94, 79, 47, 0.11);
-      --radius-xl: 28px;
-      --content-width: 520px;
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; min-height: 100%; }
-    body {
-      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
-      color: var(--text);
-      background: radial-gradient(circle at top, rgba(212, 177, 98, 0.14), transparent 34%),
-                  linear-gradient(180deg, #fbf7f0 0%, var(--bg) 100%);
-    }
-    .page {
-      width: min(calc(100% - 32px), var(--content-width));
-      margin: 0 auto;
-      padding: 48px 0 64px;
-      display: grid;
-      gap: 18px;
-    }
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
-      padding: 32px;
-    }
-    .eyebrow {
-      display: inline-flex;
-      padding: 8px 13px;
-      border-radius: 999px;
-      background: rgba(212, 177, 98, 0.18);
-      color: #99762f;
-      font-size: 0.76rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-    .prayer-label {
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 0 0 12px;
-    }
-    .prayer-text {
-      font-size: 1.1rem;
-      line-height: 1.75;
-      margin: 0 0 16px;
-      white-space: pre-wrap;
-    }
-    .prayer-from {
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-    .cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding: 16px 18px;
-      border-radius: 18px;
-      background: var(--accent);
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 700;
-      text-decoration: none;
-      margin-top: 8px;
-    }
-  </style>
+  <link rel="stylesheet" href="/css/share.css" />
 </head>
-<body>
-  <main class="page">
-    <div class="card">
-      <div class="eyebrow">Gracewell</div>
-      <p class="prayer-label">A prayer shared with you</p>
-      <p class="prayer-text" id="prayerText">Loading…</p>
-      <p class="prayer-from" id="prayerFrom"></p>
-    </div>
-    <a class="cta" href="https://apps.apple.com/us/app/gracewell/id6760741742">
-      Open in Gracewell
-    </a>
+<body data-share-kind="prayer">
+  <main class="share-page">
+    <section class="share-shell">
+      <header class="share-header">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-name">Gracewell</div>
+      </header>
+
+      <section id="loadingState" class="state-block">
+        <p class="state-copy" data-i18n="common.loading">Loading…</p>
+      </section>
+
+      <section id="contentState" class="state-block hidden">
+        <article class="share-card">
+          <p class="share-chip" id="shareChip"></p>
+
+          <p class="share-title hidden" id="shareTitle"></p>
+
+          <h1 class="share-prayer-body" id="shareBody"></h1>
+
+          <p class="share-reference hidden" id="shareReference"></p>
+
+          <footer class="share-footer">
+            <span class="share-brand">Gracewell</span>
+          </footer>
+        </article>
+
+        <div class="share-actions">
+          <a id="openAppButton" class="primary-button" href="gracewell://">
+            <span data-i18n="share.common.open_in_app">Open in Gracewell</span>
+          </a>
+          <a id="downloadButton" class="secondary-button" href="#">
+            <span data-i18n="share.common.download_app">Download Gracewell</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="unavailableState" class="state-block hidden">
+        <h1 class="state-title" data-i18n="share.prayer.unavailable_title">
+          This shared prayer is no longer available.
+        </h1>
+        <p class="state-copy" data-i18n="share.prayer.unavailable_subtitle">
+          Download Gracewell to explore more prayer and reflection.
+        </p>
+
+        <div class="share-actions">
+          <a id="downloadFallbackButton" class="primary-button" href="#">
+            <span data-i18n="share.common.download_app">Download Gracewell</span>
+          </a>
+          <a id="homeButton" class="secondary-button" href="/">
+            <span data-i18n="share.common.go_home">Go to Gracewell</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="missingState" class="state-block hidden">
+        <h1 class="state-title" data-i18n="share.common.missing_title">
+          This link looks incomplete.
+        </h1>
+        <p class="state-copy" data-i18n="share.common.missing_subtitle">
+          Try opening Gracewell or ask for the shared link again.
+        </p>
+
+        <div class="share-actions">
+          <a id="openAppMissingButton" class="primary-button" href="gracewell://">
+            <span data-i18n="share.common.open_in_app">Open in Gracewell</span>
+          </a>
+          <a id="downloadMissingButton" class="secondary-button" href="#">
+            <span data-i18n="share.common.download_app">Download Gracewell</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="invalidState" class="state-block hidden">
+        <h1 class="state-title" data-i18n="share.common.invalid_title">
+          This shared content could not be read.
+        </h1>
+        <p class="state-copy" data-i18n="share.common.invalid_subtitle">
+          Try opening Gracewell directly or ask for the shared link again.
+        </p>
+
+        <div class="share-actions">
+          <a id="openAppInvalidButton" class="primary-button" href="gracewell://">
+            <span data-i18n="share.common.open_in_app">Open in Gracewell</span>
+          </a>
+          <a id="downloadInvalidButton" class="secondary-button" href="#">
+            <span data-i18n="share.common.download_app">Download Gracewell</span>
+          </a>
+        </div>
+      </section>
+    </section>
   </main>
-  <script>
-    // Populate prayer content from query params: ?from=Sarah&text=Lord+guide+us...
-    (function () {
-      const params = new URLSearchParams(window.location.search);
-      const from = params.get("from");
-      const text = params.get("text");
-      if (text) document.getElementById("prayerText").textContent = decodeURIComponent(text);
-      if (from) document.getElementById("prayerFrom").textContent = `From ${decodeURIComponent(from)}`;
-      if (from) document.title = `Prayer from ${decodeURIComponent(from)} — Gracewell`;
-    }());
-  </script>
+
+  <script src="/js/i18n.js"></script>
+  <script src="/js/share-page.js"></script>
 </body>
 </html>
